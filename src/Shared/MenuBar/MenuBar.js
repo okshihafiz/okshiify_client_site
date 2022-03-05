@@ -2,16 +2,14 @@ import { makeStyles } from '@material-ui/styles';
 import { AppBar, Button, Container, IconButton, Toolbar, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
-import MenuIcon from '@mui/icons-material/Menu';
+
+import { Menu as MenuIcon } from "@material-ui/icons";
 
 const MenuBar = () => {
 
      const useStyle = makeStyles({
           root:{
-               padding:'14px 0',
-               background:'#131921',
-               color:'#fff',
-               fontWeight:'bold'
+               
           }
      })
 
@@ -19,7 +17,7 @@ const MenuBar = () => {
      return (
           <Container className={classes.root}>
                <Box sx={{ flexGrow: 1 }}>
-                    <AppBar position="static">
+                    <AppBar sx={{background:'#131921'}} position="static">
                     <Toolbar>
                          <IconButton
                          size="large"
@@ -28,7 +26,7 @@ const MenuBar = () => {
                          aria-label="menu"
                          sx={{ mr: 2 }}
                          >
-                         <MenuIcon />
+                        <MenuIcon />
                          </IconButton>
                          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                          News
