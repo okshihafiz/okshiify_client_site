@@ -1,7 +1,6 @@
 import { makeStyles } from '@material-ui/styles';
 import { Box, Container, Grid, MenuItem, TextField, Typography } from '@mui/material';
 import React from 'react';
-import './MiniBar.css';
 import contact from '../../../src/Images/Flags/contact.png';
 import help from '../../../src/Images/Flags/question-mark.png';
 import user from '../../../src/Images/Flags/user.png';
@@ -15,7 +14,7 @@ const MiniBar = () => {
                padding:'0',
                display:'flex',
                alignItems:'center',
-               borderBottom:'1px solid #E1E1E1'
+               borderBottom:'0.5px solid #E1E1E1'
           },
 
           cntryFlag:{
@@ -86,47 +85,43 @@ const MiniBar = () => {
      return (
           <Box className={classes.root}>
               <Container>
-              <Grid container spacing={2} columns={12}>
-               <Grid item xs={12} md={6}>
-               <Typography className={classes.discountText} variant="body2" gutterBottom>
+              <Grid container spacing={2}>
+
+              <Grid item xs={12} md={5}>
+              <Typography className={classes.discountText} variant="body2" gutterBottom>
                Super Deal! free shipping On orders over $50
                </Typography>
                </Grid>
-               <Grid item xs={12} md={6}>
-               <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 6, md: 3 }}>
-               <Grid item xs={2} >
-
+               
+              
+               <Grid item xs={6} md={1}>
                <TextField
                select
                value={currency}
                onChange={handleChange}
                variant="standard"
-          >
-          {currencies.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-            <img className={classes.cntryFlag} src={option.flag} />
-            </MenuItem>
-          ))}
-        </TextField>
-
-              
+               >
+               {currencies.map((option) => (
+               <MenuItem key={option.value} value={option.value}>
+               <img className={classes.cntryFlag} src={option.flag} />
+               </MenuItem>
+               ))}
+               </TextField>
                </Grid>
-               <Grid item xs={3} >
+               <Grid item xs={6} md={2}>
                <Typography className={classes.typography} variant="body2" gutterBottom>
                <img className={classes.topImg} src={contact} alt="" />  Contact
                </Typography>
                </Grid>
-               <Grid item xs={3} >
+               <Grid item xs={6} md={2}>
                <Typography className={classes.typography} variant="body2" gutterBottom>
                <img className={classes.topImg} src={help} alt="" />   Need Help
                </Typography>
                </Grid>
-               <Grid item xs={4} >
+               <Grid item xs={6} md={2}>
                <Typography  className={classes.typography } variant="body2" gutterBottom>
                <img className={classes.topImg} src={user} alt="" />   Sign In / Register
                </Typography>
-               </Grid>
-               </Grid>
                </Grid>
                </Grid>
               </Container>
