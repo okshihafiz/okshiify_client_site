@@ -1,0 +1,137 @@
+import { makeStyles } from '@material-ui/styles';
+import { Box, Container, Grid, MenuItem, TextField, Typography } from '@mui/material';
+import React from 'react';
+import './MiniBar.css';
+import contact from '../../../src/Images/Flags/contact.png';
+import help from '../../../src/Images/Flags/question-mark.png';
+import user from '../../../src/Images/Flags/user.png';
+
+const MiniBar = () => {
+
+     const useStyles = makeStyles({
+          root: {
+               background:' #fff',
+               color: ' #000',
+               padding:'0',
+               display:'flex',
+               alignItems:'center',
+               borderBottom:'1px solid #E1E1E1'
+          },
+
+          cntryFlag:{
+               width:'30px',
+          },
+
+          inputBox:{
+               background:'none',
+               border:'none'
+          },
+
+          discountText:{
+               paddingTop:'16px',
+               display:'flex',
+               alignItems:'center',
+          },
+
+          typography:{
+               paddingTop:'16px',
+               display:'flex',
+               alignItems:'center',
+               transition: 'all 0.3s ease',
+
+               '&:hover':{
+               color:'#FFC107',
+               cursor: 'pointer'
+               }
+          },
+
+          topImg:{
+               width:'20px',
+               marginRight: '8px',
+          },
+          
+
+     })
+
+     const classes = useStyles();
+
+     const [currency, setCurrency] = React.useState('USD');
+
+     const currencies = [
+          {
+            value: 'USD',
+            flag: 'https://cdn-icons-png.flaticon.com/512/206/206626.png',
+          },
+          
+          {
+            value: 'BAN',
+            flag: 'https://cdn-icons-png.flaticon.com/512/940/940231.png',
+          },
+          {
+            value: 'ENG',
+            flag: 'https://cdn-icons-png.flaticon.com/512/555/555417.png',
+          },
+          {
+            value: 'CND',
+            flag: 'https://cdn-icons-png.flaticon.com/512/555/555473.png',
+          },
+          
+        ];
+
+
+     const handleChange = (event) => {
+     setCurrency(event.target.value);
+     };
+
+     return (
+          <Box className={classes.root}>
+              <Container>
+              <Grid container spacing={2} columns={12}>
+               <Grid item xs={12} md={6}>
+               <Typography className={classes.discountText} variant="body2" gutterBottom>
+               Super Deal! free shipping On orders over $50
+               </Typography>
+               </Grid>
+               <Grid item xs={12} md={6}>
+               <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 6, md: 3 }}>
+               <Grid item xs={2} >
+
+               <TextField
+               select
+               value={currency}
+               onChange={handleChange}
+               variant="standard"
+          >
+          {currencies.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+            <img className={classes.cntryFlag} src={option.flag} />
+            </MenuItem>
+          ))}
+        </TextField>
+
+              
+               </Grid>
+               <Grid item xs={3} >
+               <Typography className={classes.typography} variant="body2" gutterBottom>
+               <img className={classes.topImg} src={contact} alt="" />  Contact
+               </Typography>
+               </Grid>
+               <Grid item xs={3} >
+               <Typography className={classes.typography} variant="body2" gutterBottom>
+               <img className={classes.topImg} src={help} alt="" />   Need Help
+               </Typography>
+               </Grid>
+               <Grid item xs={4} >
+               <Typography  className={classes.typography } variant="body2" gutterBottom>
+               <img className={classes.topImg} src={user} alt="" />   Sign In / Register
+               </Typography>
+               </Grid>
+               </Grid>
+               </Grid>
+               </Grid>
+              </Container>
+          </Box>
+     );
+};
+
+export default MiniBar;
