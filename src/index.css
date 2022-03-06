@@ -1,21 +1,21 @@
-.pesudoCls{
+.favoriteList{
      position: relative;
 }
 
-span::before{
+.favoriteList span::before{
      content: " ";
      width: 1px;
-     height: 30px;
+     height: 25px;
      background-color: #E1E1E1;
      position: absolute;
-     left: -24px;
+     left: 0;
 }
-span::after{
+.favoriteList span::after{
      content: " ";
      width: 1px;
-     height: 30px;
+     height: 25px;
      background-color: #E1E1E1;
      position: absolute;
-     right: -24px;
+     right: 0;
 }
 

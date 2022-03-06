@@ -53,7 +53,7 @@ const Register = () => {
               
           },
           loginInput:{
-               width:'90%',
+               width:'89%',
                padding:'10px 14px',
                fontSize:'16px',
           },

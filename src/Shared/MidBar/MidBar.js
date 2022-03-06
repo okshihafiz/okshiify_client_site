@@ -7,8 +7,7 @@ import addProducts from '../../../src/Images/Flags/heart.png';
 import dashboard from '../../../src/Images/Flags/dashboard.png';
 import CustomSearch from '../SearchBar/CustomSearch';
 import { Box } from '@mui/system';
-import './MidBar.css';
-
+import '../../index.css'
 const MidBar = () => {
 
      const useStyle = makeStyles({
@@ -54,9 +53,9 @@ const MidBar = () => {
                +1 02 444 66 997
                </Typography>
                </Grid>
-               <Grid item  style={{display:'flex', justifyContent:'center'}} xs={6} md={1}>
+               <Grid item  className="favoriteList" style={{display:'flex', justifyContent:'center'}} xs={6} md={1}>
                <Typography  style={{marginTop:'5px'}} className={classes.typography} variant="body2" gutterBottom>
-               <Box className="pesudoCls">
+               <Box>
                <span><img className={classes.topImg} src={addProducts} alt="" /></span>
                </Box>
                </Typography> 
