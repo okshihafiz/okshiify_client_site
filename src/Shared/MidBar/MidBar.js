@@ -36,10 +36,10 @@ const MidBar = () => {
      return (
           <Container  className={classes.root}>
                <Grid container spacing={2}>
-               <Grid item xs={12} md={2}>
+               <Grid  item xs={12} md={2}>
                <CardMedia
                     component="img"
-                    style={{ width:'150px'}}
+                    style={{ width:'auto', marginLeft:'26px'}}
                     image={BusinessLogo}
                     alt="green iguana"
                />

@@ -19,3 +19,8 @@
      right: 0;
 }
 
+.filterProducts > select{
+    padding: 8px 30px;
+    margin: 0 16px;
+    outline: none;
+}

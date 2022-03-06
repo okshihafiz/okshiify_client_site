@@ -40,7 +40,7 @@ const MiniBar = () => {
                transition: 'all 0.4s ease',
 
                '&:hover':{
-               color:'#FFC107',
+               color:'#EF9415',
                cursor: 'pointer'
                }
           },
