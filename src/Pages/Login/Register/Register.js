@@ -19,7 +19,6 @@ const Register = () => {
           },
           customBox:{
                width:'50%',
-               height:'60%',
                border: '1px solid #E1E1E1',
               
           },
@@ -145,22 +144,22 @@ const Register = () => {
                                    <Grid item xs={12} md={6}>
                                    <input className={classes.loginInput}  {...register("name", { required: true })} placeholder="Your full name" />
                                    <br />
-                                   {errors.name && <span style={{fontSize:'10px', color:'red'}}>This field is required</span>}
+                                   {errors.name && <span style={{fontSize:'10px', color:'red'}}>Please fill up name field</span>}
                                    </Grid>
                                    <Grid item xs={12} md={6}>
                                    <input  className={classes.loginInput} {...register("email", { required: true })} placeholder="Your email"/>
                                    <br />
-                                   {errors.email && <span style={{fontSize:'10px', color:'red'}}>This field is required</span>}
+                                   {errors.email && <span style={{fontSize:'10px', color:'red'}}>Please fill up email field</span>}
                                    </Grid>
                                    <Grid item xs={12} md={6}>
                                    <input  className={classes.loginInput} {...register("password", { required: true })}placeholder="Type a strong password" />
                                    <br />
-                                   {errors.password && <span style={{fontSize:'10px', color:'red'}}>This field is required</span>}
+                                   {errors.password && <span style={{fontSize:'10px', color:'red'}}>Please fill up password field</span>}
                                    </Grid>
                                    <Grid item xs={12} md={6}>
                                    <input  className={classes.loginInput} {...register("password2", { required: true })} placeholder="Re-type  password"/>
                                    <br />
-                                   {errors.password2 && <span style={{fontSize:'10px', color:'red'}}>This field is required</span>}
+                                   {errors.password2 && <span style={{fontSize:'10px', color:'red'}}>Please fill up re-password field</span>}
                                    </Grid>
                                    </Grid>
                                    <input className={classes.submitBtn} type="submit" value="Create Account" />
