@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/styles';
 import { Box, Container, Grid, MenuItem, TextField, Typography } from '@mui/material';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import contact from '../../../src/Images/Flags/contact.png';
 import help from '../../../src/Images/Flags/question-mark.png';
 import user from '../../../src/Images/Flags/user.png';
@@ -36,7 +37,7 @@ const MiniBar = () => {
                paddingTop:'16px',
                display:'flex',
                alignItems:'center',
-               transition: 'all 0.3s ease',
+               transition: 'all 0.4s ease',
 
                '&:hover':{
                color:'#FFC107',
@@ -119,9 +120,11 @@ const MiniBar = () => {
                </Typography>
                </Grid>
                <Grid item xs={6} md={2}>
+               <NavLink style={{textDecoration:'none', color:'inherit'}} to="/register">
                <Typography  className={classes.typography } variant="body2" gutterBottom>
                <img className={classes.topImg} src={user} alt="" />   Sign In / Register
                </Typography>
+               </NavLink>
                </Grid>
                </Grid>
               </Container>
