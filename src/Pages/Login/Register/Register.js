@@ -5,6 +5,7 @@ import { Button, Container, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { NavLink } from 'react-router-dom';
 
 const Register = () => {
 
@@ -20,16 +21,16 @@ const Register = () => {
           customBox:{
                width:'50%',
                border: '1px solid #E1E1E1',
-              
+               background:'#F6FAFE'
           },
-          boxHeadr:{
+          boxHeader:{
                height:'40px',
                display:'flex', 
                alignItems:'center',
                justifyContent:'space-between',
-               padding:'6px 6px',
-               // borderBottom:'1px solid #FFF000', 
-               background:'#232F3E'
+               borderBottom:'1px solid #E1E1E1',
+               marginTop:'10px',
+               background:'#F6FAFE'
           },
           providerBox:{
                borderBottom:'1px solid #C2C9BC', 
@@ -50,22 +51,22 @@ const Register = () => {
 
           loginForm:{
                width:'100%',
-              
           },
           loginInput:{
-               width:'89%',
+               width:'100%',
                padding:'10px 14px',
-               fontSize:'16px',
+               fontSize:'14px',
           },
           submitBtn:{
                marginTop:'40px',
-               padding:'10px 14px',
+               padding:'11px 14px',
                background:'#131921',
                border:'none', 
                color:'#F7A819',
                fontWeight:'600',
                transition:'all 0.4s ease',
-               borderRadius:'3px',
+               borderRadius:'2px',
+               fontSize:'14px',
 
                '&:hover':{
                     background:'#0a0d11', 
@@ -86,17 +87,24 @@ const Register = () => {
      return (
           <Container  className={classes.root}>
               <Box className={classes.root}>
-                    <Box className={classes.customBox}>
-
-                         {/* Header Box  */}
-                         <Box className={classes.boxHeadr}>
-                              <Typography sx={{color:'#F7A819'}} className={classes.typography} variant="h6" gutterBottom>
+                              <Box className={classes.customBox}>
+                              {/* Header Box  */}
+                              <Box className={classes.boxHeader}>
+                              <Grid container spacing={2}>
+                              <Grid item xs={12} md={6}>
+                              <Typography sx={{color:'#000', marginLeft:'12px'}} className={classes.typography} variant="h6" gutterBottom>
                               Register
                               </Typography> 
-                              <Button style={{textTransform:'capitalize', color:'#F7A819'}} variant="text">
+                              </Grid>
+                              <Grid item xs={12} md={6}>
+                              <NavLink style={{textDecoration:'none', color:'inherit'}} to="/login">
+                              <Button style={{textTransform:'capitalize', color:'#000'}} variant="text">
                               Already have an account ? Sign in
-                              </Button> 
-                         </Box>
+                              </Button>
+                              </NavLink> 
+                              </Grid>
+                              </Grid>
+                              </Box>
 
                          {/* Provider Box */}
                          <Box className={classes.providerBox}>
@@ -108,7 +116,7 @@ const Register = () => {
                                    <Grid item xs={12} md={4}>
                                    <Box className={classes.providerSign}>
                                    <Facebook style={{marginLeft:'5px'}} />
-                                   <Button style={{textTransform:'capitalize', color:'#000',  borderLeft:'1px solid #C2C9BC'}} variant="text">
+                                   <Button style={{textTransform:'capitalize', color:'#000',  borderLeft:'1px solid #C2C9BC', height:'35px'}} variant="text">
                                    Sign in  Facebook
                                    </Button>   
                                    </Box> 
@@ -116,7 +124,7 @@ const Register = () => {
                                    <Grid item xs={12} md={4}>
                                    <Box className={classes.providerSign}>
                                    <Twitter style={{marginLeft:'5px'}} />
-                                   <Button style={{textTransform:'capitalize', color:'#000', borderLeft:'1px solid #C2C9BC'}} variant="text">
+                                   <Button style={{textTransform:'capitalize', color:'#000', borderLeft:'1px solid #C2C9BC', height:'35px'}} variant="text">
                                    Sign in by Twitter
                                    </Button>   
                                    </Box> 
@@ -124,7 +132,7 @@ const Register = () => {
                                    <Grid item xs={12} md={4}>
                                    <Box className={classes.providerSign}>
                                    <Google style={{marginLeft:'5px'}}  />
-                                   <Button style={{textTransform:'capitalize', color:'#000', borderLeft:'1px solid #C2C9BC'}} variant="text">
+                                   <Button style={{textTransform:'capitalize', color:'#000', borderLeft:'1px solid #C2C9BC', height:'35px'}} variant="text">
                                    Sign in by Google
                                    </Button>   
                                    </Box> 
