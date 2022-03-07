@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/styles';
-import { Box, Container, Grid, MenuItem, TextField, Typography } from '@mui/material';
+import { Box, Container, Grid, MenuItem, TextField, Typography, useTheme } from '@mui/material';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import contact from '../../../src/Images/Flags/contact.png';
@@ -7,6 +7,8 @@ import help from '../../../src/Images/Flags/question-mark.png';
 import user from '../../../src/Images/Flags/user.png';
 
 const MiniBar = () => {
+
+     const theme = useTheme()
 
      const useStyles = makeStyles({
           root: {
@@ -50,6 +52,11 @@ const MiniBar = () => {
                marginRight: '8px',
           },
           
+          miniBar:{
+               [theme.breakpoints.down('sm')]: {
+                    display:'none' 
+                },
+          }
 
      })
 
@@ -104,18 +111,18 @@ const MiniBar = () => {
                >
                {currencies.map((option) => (
                <MenuItem key={option.value} value={option.value}>
-               <img className={classes.cntryFlag} src={option.flag} />
+               <img className={classes.cntryFlag} src={option.flag} alt=""/>
                </MenuItem>
                ))}
                </TextField>
                </Grid>
-               <Grid item xs={6} md={2}>
-               <Typography className={classes.typography} variant="body2" gutterBottom>
+               <Grid className={classes.miniBar} item xs={6} md={2}>
+               <Typography  className={classes.typography} variant="body2" gutterBottom>
                <img className={classes.topImg} src={contact} alt="" />  Contact
                </Typography>
                </Grid>
-               <Grid item xs={6} md={2}>
-               <Typography className={classes.typography} variant="body2" gutterBottom>
+               <Grid item className={classes.miniBar} xs={6} md={2}>
+               <Typography  className={classes.typography} variant="body2" gutterBottom>
                <img className={classes.topImg} src={help} alt="" />   Need Help
                </Typography>
                </Grid>

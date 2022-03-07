@@ -1,13 +1,15 @@
 import { Facebook} from '@material-ui/icons';
 import { makeStyles } from '@material-ui/styles';
 import { Google,  Twitter } from '@mui/icons-material';
-import { Button, Container, Grid, Typography } from '@mui/material';
+import { Button, Container, Grid, Typography, useTheme } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { NavLink } from 'react-router-dom';
 
 const Register = () => {
+
+     const theme = useTheme()
 
      const useStyles = makeStyles({
           root:{
@@ -29,13 +31,13 @@ const Register = () => {
                alignItems:'center',
                justifyContent:'space-between',
                borderBottom:'1px solid #E1E1E1',
-               marginTop:'10px',
+               margin:'10px 10px 6px 10px',
                background:'#F6FAFE'
           },
           providerBox:{
                borderBottom:'1px solid #C2C9BC', 
                background:'#131921',
-               padding:'14px 6px',
+               padding:'10px',
           },
           providerSign:{
                display:'flex',
@@ -72,6 +74,12 @@ const Register = () => {
                     background:'#0a0d11', 
                     cursor:'pointer',
                }
+          },
+
+          registerText:{
+               [theme.breakpoints.down('sm')]: {
+                   paddingBottom:'50px' 
+                },
           }
      })
 
@@ -91,14 +99,14 @@ const Register = () => {
                               {/* Header Box  */}
                               <Box className={classes.boxHeader}>
                               <Grid container spacing={2}>
-                              <Grid item xs={12} md={6}>
-                              <Typography sx={{color:'#000', marginLeft:'12px'}} className={classes.typography} variant="h6" gutterBottom>
+                              <Grid  item xs={12} md={6}>
+                              <Typography  sx={{color:'#000'}}  variant="h6" gutterBottom>
                               Register
                               </Typography> 
                               </Grid>
-                              <Grid item xs={12} md={6}>
+                              <Grid className={classes.registerText} item xs={12} md={6}>
                               <NavLink style={{textDecoration:'none', color:'inherit'}} to="/login">
-                              <Button style={{textTransform:'capitalize', color:'#000'}} variant="text">
+                              <Button style={{textTransform:'capitalize', color:'#000',}} variant="text">
                               Already have an account ? Sign in
                               </Button>
                               </NavLink> 

@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/styles';
-import { AppBar, Button, Container, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, Button, CardMedia, Container, IconButton, Toolbar, Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import { Menu as MenuIcon } from "@material-ui/icons";
@@ -8,12 +8,9 @@ import { Link, NavLink } from 'react-router-dom';
 import { useTheme } from '@mui/material';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import MobileLogo from '../../../src/Images/mobileLogo/mobile.png';
 
 const MenuBar = () => {
 
@@ -29,6 +26,18 @@ const MenuBar = () => {
                [theme.breakpoints.down('sm')]: {
                     display:'none' 
                 },
+          },
+
+          logoWrapper:{
+               [theme.breakpoints.up('sm')]: {
+                    display:'none'
+                },
+          },
+
+          linkItem:{
+            textDecoration:'none',
+            marginBottom:'16px',
+            color:'#171717'
           }
      })
 
@@ -47,22 +56,22 @@ const MenuBar = () => {
               
                 <ListItem button>
                   <ListItemText>
-                    <Link to="/home">Home</Link>   
+                    <Link className={classes.linkItem} to="/home">Home</Link>   
                   </ListItemText>
                 </ListItem>
                 <ListItem button>
                   <ListItemText>
-                    <Link to="/contact">Contact</Link>   
+                    <Link className={classes.linkItem} to="/contact">Contact</Link>   
                   </ListItemText>
                 </ListItem>
                 <ListItem button>
                   <ListItemText>
-                    <Link to="/about">About</Link>   
+                    <Link className={classes.linkItem} to="/about">About</Link>   
                   </ListItemText>
                 </ListItem>
                 <ListItem button>
                   <ListItemText>
-                    <Link to="/shop">Shop</Link>   
+                    <Link className={classes.linkItem} to="/shop">Shop</Link>   
                   </ListItemText>
                 </ListItem>
               
@@ -77,7 +86,9 @@ const MenuBar = () => {
                <Box sx={{ flexGrow: 1 }}>
                     <AppBar sx={{background:'#131921', boxShadow:'none'}} position="static">
                     <Toolbar>
-                         <IconButton
+
+                    
+                      <IconButton
                          size="large"
                          edge="start"
                          color="inherit"
@@ -88,8 +99,18 @@ const MenuBar = () => {
                          >
                         <MenuIcon />
                          </IconButton>
+                      
+                      
+                      <Box className={classes.logoWrapper}>
+                         <CardMedia
+                                component="img"
+                                style={{ width:'110px', marginLeft:'175px'}}
+                                image={MobileLogo}
+                                alt="shop logo"
+                          />
                          
-
+                         </Box>
+                      
 
                         <Box className={classes.routeContainer}>
                         <NavLink style={{textDecoration:'none', color:'inherit'}} to="/home">

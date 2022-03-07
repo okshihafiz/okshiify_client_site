@@ -1,4 +1,4 @@
-import { CardMedia, Container, Grid, Typography } from '@mui/material';
+import { CardMedia, Container, Grid, Typography, useTheme } from '@mui/material';
 import { makeStyles } from '@material-ui/styles';
 import React from 'react';
 import BusinessLogo from '../../../src/Images/logo/businessLogo.png';
@@ -9,6 +9,8 @@ import CustomSearch from '../SearchBar/CustomSearch';
 import { Box } from '@mui/system';
 import '../../index.css'
 const MidBar = () => {
+
+     const theme = useTheme()
 
      const useStyle = makeStyles({
          root:{
@@ -27,6 +29,12 @@ const MidBar = () => {
      topImg:{
           width:'30px',
           marginRight: '8px',
+     },
+
+     miniBar:{
+          [theme.breakpoints.down('sm')]: {
+               display:'none' 
+           },
      }
 
      })
@@ -36,7 +44,7 @@ const MidBar = () => {
      return (
           <Container  className={classes.root}>
                <Grid container spacing={2}>
-               <Grid  item xs={12} md={2}>
+               <Grid className={classes.miniBar} item xs={12} md={2}>
                <CardMedia
                     component="img"
                     style={{ width:'auto', marginLeft:'26px'}}
@@ -44,14 +52,16 @@ const MidBar = () => {
                     alt="green iguana"
                />
                </Grid>
-               <Grid item xs={12} md={4}>
+               <Grid  item xs={12} md={4}>
                <CustomSearch/>
                </Grid>
-               <Grid item style={{display:'flex', justifyContent:'center'}} xs={12} md={3}>
-               <Typography  style={{fontSize:'15px'}} className={classes.typography} variant="body2" gutterBottom>
+               <Grid  item style={{display:'flex', justifyContent:'center'}} xs={12} md={3}>
+               <Box className={classes.miniBar}>
+               <Typography  className={classes.typography}  style={{fontSize:'15px'}}  variant="body2" gutterBottom>
                <img className={classes.topImg} src={phContact} alt="" />  Call Us Now: <br/>
                +1 02 444 66 997
                </Typography>
+               </Box>
                </Grid>
                <Grid item  className="favoriteList" style={{display:'flex', justifyContent:'center'}} xs={6} md={1}>
                <Typography  style={{marginTop:'5px'}} className={classes.typography} variant="body2" gutterBottom>
@@ -63,7 +73,7 @@ const MidBar = () => {
                <Grid item style={{display:'flex', justifyContent:'center'}} xs={6} md={2}>
                <Typography style={{ fontSize:'15px'}} className={classes.typography} variant="body2" gutterBottom>
                <img className={classes.topImg} src={dashboard} alt="" />  Dash Board <br />
-               Update here's
+               Update here
                </Typography>
                </Grid>
               
