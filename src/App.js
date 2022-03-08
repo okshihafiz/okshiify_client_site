@@ -5,6 +5,7 @@ import Home from "./Pages/Home/Home/Home";
 import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
 import Shop from "./Pages/Shop/Shop";
+import Footer from "./Shared/Footer/Footer";
 
 
 
@@ -22,6 +23,7 @@ function App() {
          <Route path="/contact" element={<Contact/>} />
          <Route path="/shop" element={<Shop/>} />
        </Routes>
+       <Footer/> 
      </BrowserRouter>
     </div>
   );

@@ -34,6 +34,7 @@ const Login = () => {
                justifyContent:'space-between',
                borderBottom:'1px solid #E1E1E1',
                marginTop:'10px',
+               
                // background:'#232F3E'
           },
           providerBox:{
@@ -48,7 +49,6 @@ const Login = () => {
                marginLeft:'14px',
                marginBottom:'10px',
                background:'#131921',
-               
           },
 
           registerBox:{

@@ -31,8 +31,7 @@ const Register = () => {
                display:'flex', 
                alignItems:'center',
                justifyContent:'space-between',
-               borderBottom:'1px solid #E1E1E1',
-               margin:'10px 10px 6px 10px',
+               margin:'10px 6px 6px 10px',
                background:'#F6FAFE'
           },
           providerBox:{
@@ -124,7 +123,7 @@ const Register = () => {
                               <Grid className={classes.registerText} item xs={12} md={6}>
                               <NavLink style={{textDecoration:'none', color:'inherit'}} to="/login">
                               <Button style={{textTransform:'capitalize', color:'#000',}} variant="text">
-                              Already have an account ? Sign in
+                              Already have an account? SignIn now
                               </Button>
                               </NavLink> 
                               </Grid>
