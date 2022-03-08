@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/styles';
 import { Google,  Twitter } from '@mui/icons-material';
 import { Button, Container, Grid, Typography, useTheme } from '@mui/material';
 import { Box } from '@mui/system';
+import clsx from 'clsx';
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { NavLink } from 'react-router-dom';
@@ -41,7 +42,7 @@ const Register = () => {
           },
           providerSign:{
                display:'flex',
-               justifyContent:'space-around',
+               justifyContent:'flex-start',
                alignItems:'center',
                borderBottom:'1px solid #C2C9BC', 
                background:'#fff', 
@@ -80,6 +81,18 @@ const Register = () => {
                [theme.breakpoints.down('sm')]: {
                    paddingBottom:'50px' 
                 },
+          },
+
+          responsiveBox:{
+               [theme.breakpoints.down('sm')]: {
+                    width:'100%'
+                },
+          },
+
+          signInContainer:{
+               [theme.breakpoints.down('sm')]: {
+                    justifyContent:'center'
+                }
           }
      })
 
@@ -93,9 +106,13 @@ const Register = () => {
      console.log(watch("example")); 
 
      return (
-          <Container  className={classes.root}>
+          <Container>
               <Box className={classes.root}>
-                              <Box className={classes.customBox}>
+                              <Box className={
+                                   clsx(
+                                        classes.customBox,
+                                        classes.responsiveBox
+                                   )}>
                               {/* Header Box  */}
                               <Box className={classes.boxHeader}>
                               <Grid container spacing={2}>
@@ -122,24 +139,39 @@ const Register = () => {
 
                               <Grid container spacing={2}>
                                    <Grid item xs={12} md={4}>
-                                   <Box className={classes.providerSign}>
-                                   <Facebook style={{marginLeft:'5px'}} />
+                                   <Box className={
+                                         clsx(
+                                                  classes.providerSign,
+                                                  classes.signInContainer,
+                                             )
+                                   }>
+                                   <Facebook style={{marginLeft:'5px', marginRight:'5px'}} />
                                    <Button style={{textTransform:'capitalize', color:'#000',  borderLeft:'1px solid #C2C9BC', height:'35px'}} variant="text">
-                                   Sign in  Facebook
+                                   Sign in Facebook
                                    </Button>   
                                    </Box> 
                                    </Grid>
                                    <Grid item xs={12} md={4}>
-                                   <Box className={classes.providerSign}>
-                                   <Twitter style={{marginLeft:'5px'}} />
+                                   <Box className={
+                                         clsx(
+                                                  classes.providerSign,
+                                                  classes.signInContainer,
+                                             )
+                                   }>
+                                   <Twitter style={{marginLeft:'5px', marginRight:'5px'}} />
                                    <Button style={{textTransform:'capitalize', color:'#000', borderLeft:'1px solid #C2C9BC', height:'35px'}} variant="text">
                                    Sign in by Twitter
                                    </Button>   
                                    </Box> 
                                    </Grid>
                                    <Grid item xs={12} md={4}>
-                                   <Box className={classes.providerSign}>
-                                   <Google style={{marginLeft:'5px'}}  />
+                                   <Box className={
+                                         clsx(
+                                                  classes.providerSign,
+                                                  classes.signInContainer,
+                                             )
+                                   }>
+                                   <Google style={{marginLeft:'5px', marginRight:'5px'}}  />
                                    <Button style={{textTransform:'capitalize', color:'#000', borderLeft:'1px solid #C2C9BC', height:'35px'}} variant="text">
                                    Sign in by Google
                                    </Button>   

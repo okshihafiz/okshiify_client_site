@@ -1,13 +1,16 @@
 import { Facebook} from '@material-ui/icons';
 import { makeStyles } from '@material-ui/styles';
 import { Google,  Twitter } from '@mui/icons-material';
-import { Button, Container, Grid, Typography } from '@mui/material';
+import { Button, Container, Grid, Typography, useTheme } from '@mui/material';
 import { Box } from '@mui/system';
+import clsx from 'clsx';
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { NavLink } from 'react-router-dom';
 
 const Login = () => {
+
+     const theme = useTheme()
 
      const useStyles = makeStyles({
           root:{
@@ -80,6 +83,19 @@ const Login = () => {
 
           greetingText:{
               margin:'16px 10px' 
+          },
+
+          responsiveBox:{
+               [theme.breakpoints.down('sm')]: {
+                    width:'100%',
+                    marginTop:'50px'
+                }
+          },
+
+          signInContainer:{
+               [theme.breakpoints.down('sm')]: {
+                    justifyContent:'center'
+                }
           }
 
 
@@ -95,9 +111,14 @@ const Login = () => {
      console.log(watch("example"));
 
      return (
-          <Container  className={classes.root}>
+          <Container>
               <Box className={classes.root}>
-                              <Box className={classes.customBox}>
+                              <Box className={
+                                   clsx(
+                                        classes.customBox,
+                                        classes.responsiveBox
+                                   )
+                              }>
                               {/* Header Box  */}
                               <Box className={classes.boxHeader}>
                               <Grid container spacing={2}>
@@ -129,21 +150,36 @@ const Login = () => {
                                              Happy! shopping and deal with us
                                         </Typography>
                                         </Box>
-                                        <Box className={classes.providerSign}>
+                                        <Box className={
+                                             clsx(
+                                                  classes.providerSign,
+                                                  classes.signInContainer,
+                                             )
+                                        }>
                                         <Facebook style={{marginRight:'10px', color:'#EF9415', marginLeft:'10px'}} />
                                         <Button style={{textTransform:'capitalize', color:'#EF9415',height:'35px'}} variant="text">
                                         Sign in  Facebook
                                         </Button>   
                                         </Box> 
 
-                                        <Box className={classes.providerSign}>
+                                        <Box className={
+                                             clsx(
+                                                  classes.providerSign,
+                                                  classes.signInContainer,
+                                             )
+                                        }>
                                         <Twitter style={{marginRight:'10px', color:'#EF9415', marginLeft:'10px'}} />
                                         <Button style={{textTransform:'capitalize', color:'#EF9415', height:'35px'}} variant="text">
                                         Sign in by Twitter
                                         </Button>   
                                         </Box>
 
-                                        <Box className={classes.providerSign}>
+                                        <Box className={
+                                             clsx(
+                                                  classes.providerSign,
+                                                  classes.signInContainer,
+                                             )
+                                        }>
                                         <Google style={{marginRight:'10px', color:'#EF9415', marginLeft:'10px'}}  />
                                         <Button style={{textTransform:'capitalize', color:'#EF9415', height:'35px'}} variant="text">
                                         Sign in by Google
