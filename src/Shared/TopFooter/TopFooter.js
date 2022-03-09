@@ -51,7 +51,7 @@ const TopFooter = () => {
                     <Typography sx={{color:'#949AA6', letterSpacing:'3px'}} variant="caption" display="block" gutterBottom>
                     GET FREE NOTIFICATION
                     </Typography>
-                    <Typography sx={{color:'#D1D5DB'}} variant="h5" gutterBottom component="div">
+                    <Typography  variant="h5" gutterBottom component="div">
                     Subscribe to  Newsletter
                     </Typography>
                     <Typography className={classes.subscribeText} variant="body2" gutterBottom>
@@ -66,7 +66,7 @@ const TopFooter = () => {
                          <TextField placeholder='Enter your email' className={classes.inputField} id="outlined-basic"  variant="outlined" />
                          </Grid>
                          <Grid item xs={12}  md={6}>
-                         <Button className={classes.subscribeBtn}  variant="contained" color="inherit">Contained</Button>
+                         <Button className={classes.subscribeBtn}  variant="contained" color="inherit">Subscribe</Button>
                          </Grid>
                     </Grid>
                      </form>
