@@ -11,7 +11,7 @@ const TopFooter = () => {
               borderBottom:'1px solid #4E4F50'
           },
           subscribeText:{
-               color:'#949AA6',
+               color:'#999999',
                marginTop:'-10px', 
                fontSize:'12px'
           },
@@ -48,7 +48,7 @@ const TopFooter = () => {
                     </Grid>
                     <Grid item xs={12} md={5}>
                     <Box>
-                    <Typography sx={{color:'#949AA6', letterSpacing:'3px'}} variant="caption" display="block" gutterBottom>
+                    <Typography sx={{color:'#999999', letterSpacing:'3px'}} variant="caption" display="block" gutterBottom>
                     GET FREE NOTIFICATION
                     </Typography>
                     <Typography  variant="h5" gutterBottom component="div">

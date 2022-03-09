@@ -3,6 +3,7 @@ import React from 'react';
 import TopFooter from '../TopFooter/TopFooter';
 import { makeStyles } from '@material-ui/styles';
 import MidFooter from '../MidFooter/MidFooter';
+import BottomFooter from '../BottomFooter/BottomFooter';
 
 const Footer = () => {
 
@@ -21,7 +22,8 @@ const Footer = () => {
      return (
           <Box className={classes.root}>
            <TopFooter/> 
-           <MidFooter/>   
+           <MidFooter/> 
+           <BottomFooter/>  
           </Box>
      );
 };
