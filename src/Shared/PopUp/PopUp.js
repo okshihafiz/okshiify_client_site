@@ -22,7 +22,7 @@ const PopUp = () => {
                     <Box>
                     <h3 className="title">Special discount</h3>
                     <h2>96 <sup>%</sup><span>off</span></h2>
-                    <p>In festival, We provide 96% discount. Ff you are interested to shopping, follow up our offer</p>
+                    <p>In festival, We provide 96% discount. If you are interested to shopping, follow up our offer</p>
                     <NavLink style={{textDecoration:'none', color:'inherit'}} to="/">
                               <Button className="offBtn" variant="text">
                               Get the Offer

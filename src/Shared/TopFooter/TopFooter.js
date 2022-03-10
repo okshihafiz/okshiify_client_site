@@ -21,6 +21,7 @@ const TopFooter = () => {
                border:'none',
                borderRadius:'4px',
                outline:'none',
+               
           },
           subscribeBtn:{
                background:'#EF9415',
