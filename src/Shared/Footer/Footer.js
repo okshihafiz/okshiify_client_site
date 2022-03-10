@@ -12,7 +12,7 @@ const Footer = () => {
                background:'#222222',
                padding:'48px',
                color:'#fff',
-               marginTop:'400px'
+               marginTop:'600px'
           }
      })
 

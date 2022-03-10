@@ -71,7 +71,7 @@ const MidBar = () => {
                </Typography> 
                </Grid>
                <Grid item style={{display:'flex', justifyContent:'center'}} xs={6} md={2}>
-               <Typography style={{ fontSize:'15px'}} className={classes.typography} variant="body2" gutterBottom>
+               <Typography style={{ fontSize:'15px', cursor:'pointer'}} className={classes.typography} variant="body2" gutterBottom>
                <img className={classes.topImg} src={dashboard} alt="" />  Dash Board <br />
                Update here
                </Typography>

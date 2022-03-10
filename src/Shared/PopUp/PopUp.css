@@ -1,0 +1,104 @@
+body{
+     min-height: 100vh;
+}
+.popup{
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%); 
+     display: none;
+}
+.contentBox{
+     width:600px;
+     height: 400px;
+     background: linear-gradient(90deg, #ffa79f, #f9a8bc, #e8afd4, #d1b7e3, #b9bfe8, #aac5e3, #a5c9d9, #abcace);
+     border-radius: 20px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);    
+     display: flex; 
+}
+
+.contentBox .imgBx{
+     position: relative;
+     width: 300px;
+     height: 400px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.contentBox .imgBx::before{
+     content: '';
+     position:absolute ;
+     width: 250px;
+     height: 250px;
+     background: #b5b5b557;
+     border-radius: 50%;
+}
+
+.contentBox .imgBx img{
+     position: relative;
+     max-width: 300px;
+     z-index: 1;
+}
+.contentBox .content{
+     position: relative;
+     width: 300px;
+     height: 400px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.contentBox .content h3{
+     color:#333;
+     line-height: 1em;
+     font-weight: 300;
+     font-size: 2em;
+}
+.contentBox .content h2{
+     color:#DB2F69;
+     line-height: 1em;
+     font-size: 4em;
+}
+.contentBox .content h2 span{
+     color:#171717;
+     font-size:0.75em;
+     text-transform: uppercase;
+}
+.contentBox .content p{
+     font-weight: 300;
+     color:#171717;
+     margin-right: 10px;
+     margin-bottom: 10px;
+}
+.contentBox .content .offBtn{
+     display: inline-block;
+     padding: 10px 20px;
+     background-color: #DB2F69;
+     color: #fff;
+     border-radius: 10px;
+     text-transform: capitalize;
+}
+.close{
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     width: 40px;
+     height: 40px;
+     background: #b5b5b557 url('../../Images/close.png');
+     background-repeat: no-repeat;
+     background-size: 10px;
+     background-position:center;
+     cursor: pointer;
+     border-radius: 50%;
+     z-index: 10;
+}
+
+/* responsive discount card */
+
+@media ( max-width : 767px){
+     .contentBox{
+          width: 300px;
+          height: auto;
+          flex-direction: column;
+     }
+}
