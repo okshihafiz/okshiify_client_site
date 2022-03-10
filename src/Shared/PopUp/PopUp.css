@@ -101,4 +101,25 @@ body{
           height: auto;
           flex-direction: column;
      }
+     .contentBox .imgBx{
+          height: 200px;
+          transform: translateY(-50px);
+     }
+     .contentBox .imgBx::before{
+          background: #FDA7A8;
+     }
+     .contentBox .content{
+          height: auto;
+          text-align: center;
+          padding: 20px;
+          padding-top: 0;
+     }
+     .close{
+          top: -50px;
+          right:-10px;
+          background: #b5b5b557 url('../../Images/close.png');
+          background-repeat: no-repeat;
+          background-size: 10px;
+          background-position:center;
+     }
 }
