@@ -101,15 +101,15 @@ const MenuBar = () => {
                          </IconButton>
                       
                       
-                      <Box className={classes.logoWrapper}>
+                      <Box style={{ display:'block', marginLeft:'auto'}} className={classes.logoWrapper}>
                          <CardMedia
                                 component="img"
-                                style={{ width:'110px', marginLeft:'175px'}}
+                                style={{ width:'110px',}}
                                 image={MobileLogo}
                                 alt="shop logo"
                           />
                          
-                         </Box>
+                      </Box>
                       
 
                         <Box className={classes.routeContainer}>
