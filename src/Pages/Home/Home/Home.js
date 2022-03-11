@@ -18,6 +18,7 @@ const Home = () => {
 
              <Container>
                 <PopUp/>
+              
              </Container>
 
              <Box>

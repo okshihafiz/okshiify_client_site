@@ -11,6 +11,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import MobileLogo from '../../../src/Images/mobileLogo/mobile.png';
+import clsx from 'clsx';
 
 const MenuBar = () => {
 
@@ -38,6 +39,13 @@ const MenuBar = () => {
             textDecoration:'none',
             marginBottom:'16px',
             color:'#171717'
+          },
+
+          logoRight:{
+            [theme.breakpoints.down('sm')]: {
+               display:'block', 
+               marginLeft:'auto' 
+          },
           }
      })
 
@@ -101,7 +109,13 @@ const MenuBar = () => {
                          </IconButton>
                       
                       
-                      <Box style={{ display:'block', marginLeft:'auto'}} className={classes.logoWrapper}>
+                      <Box  className={
+                        clsx(
+                          classes.logoWrapper,
+                          classes.logoRight,
+                        )
+                      }>
+                        
                          <CardMedia
                                 component="img"
                                 style={{ width:'110px',}}
