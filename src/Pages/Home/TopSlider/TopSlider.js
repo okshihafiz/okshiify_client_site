@@ -11,7 +11,7 @@ import 'swiper/modules/pagination/pagination.min.css'
 // import required modules
 import { Pagination } from "swiper";
 import './styles.css';
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const TopSlider = () => {
@@ -25,14 +25,29 @@ const TopSlider = () => {
         justifyContent:'flex-start'
     },
     title:{
-      fontSize:'45px',
-      
+      fontSize:'46px',
+      marginBottom:'16px'
     },
     rightBox:{
     flex:1,
+    textAlign:'left',
+    marginLeft:'20px'
     },
     leftBox:{
       
+    },
+    des:{
+      letterSpacing:'1.9px',
+      fontSize:'18px',
+      margin:'14px 0',
+      
+    },
+    shopBtn:{
+      padding:'8px 12px',
+      background:'transparent',
+      border: '1px solid #555',
+      borderRadius:'0px',
+      marginTop:'10px'
     }
 })
 
@@ -53,8 +68,9 @@ const classes = useStyles();
             <img style={{width:'100%', height:'100%'}} src={p1} alt="" />
           </Box>
           <Box className={classes.rightBox}>
-          <h2 className={classes.title}>
-            Aesthetic LX.</h2>
+          <h2 className={classes.title}>Aesthetic LX.</h2>
+          <p>DON'T COMPROMISE ON DESIGN! GET FLAT 30% OFF NEW ARRIVALS.</p>
+          <Button className={classes.shopBtn} variant="outlined" color="inherit">SHOP NOW</Button>
           </Box>
         </SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
