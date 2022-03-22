@@ -1,16 +1,13 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { makeStyles } from '@material-ui/styles';
+
 
 const CategoryFilter = () => {
 
      const { register, handleSubmit } = useForm();
      const onSubmit = (data) => console.log(data);
 
-     const useStyles  = makeStyles({
-          
-     })
-     const classes = useStyles();
+     
 
      return (
           <form className='filterProducts' onSubmit={handleSubmit(onSubmit)}>
