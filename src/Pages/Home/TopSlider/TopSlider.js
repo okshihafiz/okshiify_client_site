@@ -13,10 +13,13 @@ import 'swiper/modules/pagination/pagination.min.css'
 // import required modules
 import { Pagination } from "swiper";
 import './styles.css';
-import { Box, Button } from '@mui/material';
+import { Box, Button, useTheme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const TopSlider = () => {
+
+
+  const theme = useTheme()
 
   const useStyles = makeStyles({
     sliderWrapper:{
@@ -86,7 +89,7 @@ const classes = useStyles();
         <SwiperSlide className={
           clsx(
             classes.sliderWrapper,
-            classes.firstBg
+            classes.firstBg,
           )
         }>
           <Box className={classes.leftBox}>

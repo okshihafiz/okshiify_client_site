@@ -7,6 +7,7 @@ import MiniBar from '../../../Shared/MiniBar/MiniBar';
 import Footer from "../../../Shared/Footer/Footer";
 import PopUp from '../../../Shared/PopUp/PopUp';
 import TopSlider from '../TopSlider/TopSlider';
+import DemoCard from '../DemoCard/DemoCard';
 
 const Home = () => {
      return (
@@ -18,13 +19,14 @@ const Home = () => {
              <PopUp/>
              </Box>
 
-             <Container sx={{marginTop:'70px'}}>
+             <Container sx={{marginTop:'60px'}}>
              <Grid container spacing={2}>
                     <Grid item xs={12} md={3}>
                     
                     </Grid>
                     <Grid item xs={12} md={9}>
                     <TopSlider/>
+                    <DemoCard/>
                     </Grid>
                     
                </Grid>
