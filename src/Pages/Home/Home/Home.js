@@ -18,7 +18,7 @@ const Home = () => {
              <PopUp/>
              </Box>
 
-             <Container sx={{marginTop:'120px'}}>
+             <Container sx={{marginTop:'70px'}}>
              <Grid container spacing={2}>
                     <Grid item xs={12} md={3}>
                     
