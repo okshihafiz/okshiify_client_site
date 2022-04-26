@@ -38,6 +38,10 @@ const TopSlider = () => {
       flex: 1,
       textAlign: "left",
       marginLeft: "20px",
+      width: "55%",
+    },
+    leftBox: {
+      width: "45%",
     },
     des: {
       letterSpacing: "1.9px",
@@ -83,7 +87,7 @@ const TopSlider = () => {
       >
         <SwiperSlide className={clsx(classes.sliderWrapper, classes.firstBg)}>
           <Box className={classes.leftBox}>
-            <img style={{ width: "100%" }} src={p1} alt="" />
+            <img style={{ width: "80%" }} src={p1} alt="" />
           </Box>
           <Box className={classes.rightBox}>
             <h2 className={classes.title}>Aesthetic LX.</h2>

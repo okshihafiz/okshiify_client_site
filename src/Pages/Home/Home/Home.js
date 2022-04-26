@@ -9,6 +9,7 @@ import PopUp from "../../../Shared/PopUp/PopUp";
 import TopSlider from "../TopSlider/TopSlider";
 import DemoCard from "../DemoCard/DemoCard";
 import NewsLetter from "../NewsLetter/NewsLetter";
+import Products from "../../Products/Products";
 const Home = () => {
   return (
     <>
@@ -25,7 +26,7 @@ const Home = () => {
         <Grid container spacing={2}>
           <Grid item xs={12} md={3}></Grid>
           <Grid item xs={12} md={9}>
-            {/* <NewsLetter /> */}
+            <Products />
           </Grid>
         </Grid>
       </Container>
