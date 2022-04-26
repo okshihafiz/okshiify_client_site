@@ -1,3 +1,4 @@
+import { Grid } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 import { productsData } from "../Home/ProductsData/ProductsData";
@@ -11,11 +12,11 @@ const Container = styled.div`
 
 const Products = () => {
   return (
-    <Container>
+    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
       {productsData.map((product) => (
         <Product product={product} key={product.id} />
       ))}
-    </Container>
+    </Grid>
   );
 };
 

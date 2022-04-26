@@ -28,8 +28,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex: 1;
-  min-width: 280px;
-  height: 350px;
+  min-width: 250px;
+  height: 280px;
   background: #f5fbfd;
   border-radius: 6px;
   position: relative;
@@ -39,8 +39,8 @@ const Container = styled.div`
   }
 `;
 const Circle = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background: #fff;
   border-radius: 50%;
   position: absolute;
