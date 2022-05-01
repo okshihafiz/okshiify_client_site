@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 const InfoCards = () => {
   const [webInfo, setWebInfo] = useState([]);
-  console.log(webInfo);
+  // console.log(webInfo);
 
   useEffect(() => {
     fetch("/webInfo.json")
