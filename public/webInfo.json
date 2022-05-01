@@ -1,0 +1,26 @@
+[
+  {
+    "id": "01",
+    "title": "Free Delivery",
+    "title2": "free shopping on all order",
+    "img": "https://i.ibb.co/0K3YMnS/img1.png"
+  },
+  {
+    "id": "02",
+    "title": "Online Support 24/7",
+    "title2": "Support online 24 hour",
+    "img": "https://i.ibb.co/vJknMwH/img2.png"
+  },
+  {
+    "id": "03",
+    "title": "Money Return",
+    "title2": "Back guarantee under 7 days",
+    "img": "https://i.ibb.co/qsBZZD4/img3.png"
+  },
+  {
+    "id": "04",
+    "title": "Member Discount",
+    "title2": "Onevery order over $30.00",
+    "img": "https://i.ibb.co/cYnkGWZ/img4.png"
+  }
+]

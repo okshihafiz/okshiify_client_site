@@ -10,6 +10,7 @@ import TopSlider from "../TopSlider/TopSlider";
 import DemoCard from "../DemoCard/DemoCard";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import Products from "../../Products/Products";
+import InfoCards from "./InfoCards/InfoCards";
 const Home = () => {
   return (
     <>
@@ -19,6 +20,7 @@ const Home = () => {
         <MenuBar />
         <TopSlider />
         <DemoCard />
+        <InfoCards />
         <PopUp />
       </Container>
 
