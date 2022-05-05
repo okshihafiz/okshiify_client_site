@@ -7,13 +7,21 @@ import {
   onAuthStateChanged,
   signOut,
   updateProfile,
+  signInWithPopup,
+  GoogleAuthProvider,
 } from "firebase/auth";
 
 // initializeAuthentication Friebase
 initializeAuthentication();
 const useFirebase = () => {
+  //State for store user Data
   const [user, setUser] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [isAdmin, setIsAdmin] = useState(false);
+
   const auth = getAuth();
+  const googleProvider = new GoogleAuthProvider();
 
   const resisterUser = (email, password, name) => {
     console.log(name);
@@ -38,6 +46,23 @@ const useFirebase = () => {
     })
       .then(() => {})
       .catch((error) => {});
+  };
+
+  // Login with Google method
+  const loginWithGoogle = (location, navigate) => {
+    setIsLoading(true);
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        const user = result.user;
+
+        const destination = location?.state?.from || "/";
+        navigate(destination);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      })
+      .finally(() => setIsLoading(false));
   };
 
   const logInUser = (email, password) => {
@@ -80,6 +105,7 @@ const useFirebase = () => {
     resisterUser,
     logInUser,
     logOut,
+    loginWithGoogle,
   };
 };
 export default useFirebase;
