@@ -7,9 +7,10 @@ import clsx from 'clsx';
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { NavLink } from 'react-router-dom';
+import useAuth from './../../../hooks/useAuth';
 
 const Register = () => {
-
+const {resisterUser}=useAuth()
      const theme = useTheme()
 
      const useStyles = makeStyles({
@@ -100,9 +101,12 @@ const Register = () => {
      //REACT HOOK FORM
 
      const { register, handleSubmit, watch, formState: { errors } } = useForm();
-     const onSubmit = data => console.log(data);
+     const onSubmit = data => {
+          console.log('All test');
+          // resisterUser(data.email)
+     };
    
-     console.log(watch("example")); 
+     // console.log(watch("example")); 
 
      return (
           <Container>
