@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AuthProvider from "./Contexts/AuthProvider/AuthProvider";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import Home from "./Pages/Home/Home/Home";
@@ -9,6 +10,7 @@ import Shop from "./Pages/Shop/Shop";
 function App() {
   return (
     <BrowserRouter>
+      <AuthProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -18,6 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
       </Routes>
+      </AuthProvider>
     </BrowserRouter>
   );
 }
