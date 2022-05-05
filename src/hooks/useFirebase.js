@@ -5,6 +5,8 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  GoogleAuthProvider,
+  signInWithPopup,
   signOut,
 } from "firebase/auth";
 
@@ -62,6 +64,8 @@ const logInUser=(email,password)=>{
         // An error happened.
       });
   };
+
+
 
   return {
     user,
