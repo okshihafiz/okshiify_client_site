@@ -21,8 +21,8 @@ const Home = () => {
         <MenuBar />
         <TopSlider />
         <DemoCard />
-        <InfoCards />
         <DealProduct />
+        <InfoCards />
         <PopUp />
       </Container>
 
