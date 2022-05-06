@@ -9,7 +9,7 @@ import p3 from "../../../Images/demoCard/p3.png";
 const DemoCard = () => {
   const useStyle = makeStyles({
     demoBox: {
-      background: "#171717",
+      // background: "#171717",
       borderRadius: "3px",
       position: "relative",
     },
@@ -39,7 +39,7 @@ const DemoCard = () => {
       spacing={2}
     >
       <Grid item xs={12} md={4}>
-        <Box className={classes.demoBox}>
+        <Box sx={{ background: "#e1e1e1" }} className={classes.demoBox}>
           <img width="100%" src={p1} alt="" />
           <Box>
             <Button
@@ -54,7 +54,7 @@ const DemoCard = () => {
         </Box>
       </Grid>
       <Grid item xs={12} md={4}>
-        <Box className={classes.demoBox}>
+        <Box sx={{ background: "#F9B019" }} className={classes.demoBox}>
           <img width="100%" src={p2} alt="" />
           <Box>
             <Button
@@ -69,7 +69,7 @@ const DemoCard = () => {
         </Box>
       </Grid>
       <Grid item xs={12} md={4}>
-        <Box className={classes.demoBox}>
+        <Box sx={{ background: "#e1e1e1" }} className={classes.demoBox}>
           <img width="100%" src={p3} alt="" />
           <Box>
             <Button
