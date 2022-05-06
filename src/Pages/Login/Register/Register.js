@@ -6,11 +6,14 @@ import { Box } from "@mui/system";
 import clsx from "clsx";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "./../../../hooks/useAuth";
 
 const Register = () => {
-  const { resisterUser } = useAuth();
+  //Location & navigate
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { resisterUser, loginWithGoogle } = useAuth();
   const theme = useTheme();
 
   const useStyles = makeStyles({
@@ -116,6 +119,11 @@ const Register = () => {
 
   // console.log(watch("example"));
 
+  //handle google login
+  const handleGoogleLogin = () => {
+    loginWithGoogle(location, navigate);
+  };
+
   return (
     <Container>
       <Box className={classes.root}>
@@ -207,6 +215,7 @@ const Register = () => {
                 >
                   <Google style={{ marginLeft: "5px", marginRight: "5px" }} />
                   <Button
+                    onClick={handleGoogleLogin}
                     style={{
                       textTransform: "capitalize",
                       color: "#000",
