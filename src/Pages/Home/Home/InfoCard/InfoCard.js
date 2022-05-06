@@ -1,9 +1,8 @@
 import React from "react";
-import { Box, CardMedia, Grid } from "@mui/material";
+import { CardMedia, Grid } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import Paper from "@mui/material/Paper";
 
 const InfoCard = ({ webInfo }) => {
   const { title, title2, img } = webInfo;

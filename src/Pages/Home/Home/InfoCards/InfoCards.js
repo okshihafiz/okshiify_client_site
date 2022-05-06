@@ -1,4 +1,3 @@
-import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
 import InfoCard from "../InfoCard/InfoCard";

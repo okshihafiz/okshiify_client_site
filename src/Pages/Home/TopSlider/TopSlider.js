@@ -11,11 +11,11 @@ import "swiper/modules/pagination/pagination.min.css";
 // import required modules
 import { Pagination } from "swiper";
 import "./styles.css";
-import { Box, Button, useTheme } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const TopSlider = () => {
-  const theme = useTheme();
+  // const theme = useTheme();
 
   const useStyles = makeStyles({
     sliderWrapper: {

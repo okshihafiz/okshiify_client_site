@@ -8,7 +8,6 @@ import Footer from "../../../Shared/Footer/Footer";
 import PopUp from "../../../Shared/PopUp/PopUp";
 import TopSlider from "../TopSlider/TopSlider";
 import DemoCard from "../DemoCard/DemoCard";
-import NewsLetter from "../NewsLetter/NewsLetter";
 import Products from "../../Products/Products";
 import InfoCards from "./InfoCards/InfoCards";
 import DealProduct from "../DealProduct/DealProduct";
