@@ -5,10 +5,12 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  GoogleAuthProvider,
+  signInWithPopup,
   signOut,
   updateProfile,
-  signInWithPopup,
-  GoogleAuthProvider,
+ 
+
 } from "firebase/auth";
 
 // initializeAuthentication Friebase
@@ -99,6 +101,8 @@ const useFirebase = () => {
         // An error happened.
       });
   };
+
+
 
   return {
     user,

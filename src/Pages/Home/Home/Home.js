@@ -11,6 +11,7 @@ import DemoCard from "../DemoCard/DemoCard";
 import Products from "../../Products/Products";
 import InfoCards from "./InfoCards/InfoCards";
 import DealProduct from "../DealProduct/DealProduct";
+import TopCategories from "./TopCategories/TopCategories";
 const Home = () => {
   return (
     <>
@@ -33,7 +34,9 @@ const Home = () => {
           </Grid>
         </Grid>
       </Container>
-
+      <Container>
+        <TopCategories />
+      </Container>
       <Box>
         <Footer />
       </Box>
