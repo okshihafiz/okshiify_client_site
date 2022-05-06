@@ -11,6 +11,7 @@ import DemoCard from "../DemoCard/DemoCard";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import Products from "../../Products/Products";
 import InfoCards from "./InfoCards/InfoCards";
+import TopCategories from "./TopCategories/TopCategories";
 const Home = () => {
   return (
     <>
@@ -22,6 +23,7 @@ const Home = () => {
         <DemoCard />
         <InfoCards />
         <PopUp />
+       
       </Container>
 
       <Container sx={{ marginTop: "60px" }}>
@@ -29,10 +31,14 @@ const Home = () => {
           <Grid item xs={12} md={3}></Grid>
           <Grid item xs={12} md={9}>
             <Products />
+            
           </Grid>
         </Grid>
       </Container>
-
+      <Container>
+        
+      <TopCategories/>
+      </Container>
       <Box>
         <Footer />
       </Box>
