@@ -9,8 +9,8 @@ import {
   signInWithPopup,
   signOut,
   updateProfile,
-  signInWithPopup,
-  GoogleAuthProvider,
+ 
+
 } from "firebase/auth";
 
 // initializeAuthentication Friebase
