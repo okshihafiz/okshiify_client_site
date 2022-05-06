@@ -8,6 +8,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 
 // initializeAuthentication Friebase
@@ -16,7 +17,8 @@ const useFirebase = () => {
   const [user, setUser] = useState({});
   const auth = getAuth();
 
-  const resisterUser = (email, password) => {
+  const resisterUser = (email, password, name) => {
+    console.log(name);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
@@ -28,20 +30,30 @@ const useFirebase = () => {
         const errorMessage = error.message;
         // ..
       });
+
+    const newUser = { email, displayName: name };
+    setUser(newUser);
+
+    //Send name to firebase
+    updateProfile(auth.currentUser, {
+      displayName: name,
+    })
+      .then(() => {})
+      .catch((error) => {});
   };
 
-const logInUser=(email,password)=>{
+  const logInUser = (email, password) => {
     signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-    });
-}
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+  };
 
   //   User Ovser state
   useEffect(() => {
