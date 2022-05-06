@@ -8,9 +8,9 @@ import Footer from "../../../Shared/Footer/Footer";
 import PopUp from "../../../Shared/PopUp/PopUp";
 import TopSlider from "../TopSlider/TopSlider";
 import DemoCard from "../DemoCard/DemoCard";
-import NewsLetter from "../NewsLetter/NewsLetter";
 import Products from "../../Products/Products";
 import InfoCards from "./InfoCards/InfoCards";
+import DealProduct from "../DealProduct/DealProduct";
 import TopCategories from "./TopCategories/TopCategories";
 const Home = () => {
   return (
@@ -21,9 +21,9 @@ const Home = () => {
         <MenuBar />
         <TopSlider />
         <DemoCard />
+        <DealProduct />
         <InfoCards />
         <PopUp />
-       
       </Container>
 
       <Container sx={{ marginTop: "60px" }}>
@@ -31,13 +31,11 @@ const Home = () => {
           <Grid item xs={12} md={3}></Grid>
           <Grid item xs={12} md={9}>
             <Products />
-            
           </Grid>
         </Grid>
       </Container>
       <Container>
-        
-      <TopCategories/>
+        <TopCategories />
       </Container>
       <Box>
         <Footer />

@@ -1,10 +1,4 @@
-import {
-  CardMedia,
-  Container,
-  Grid,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { CardMedia, Grid, Typography, useTheme } from "@mui/material";
 import { makeStyles } from "@material-ui/styles";
 import React from "react";
 import BusinessLogo from "../../../src/Images/logo/businessLogo.png";

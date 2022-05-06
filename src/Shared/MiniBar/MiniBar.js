@@ -13,7 +13,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import contact from "../../../src/Images/Flags/contact.png";
 import help from "../../../src/Images/Flags/question-mark.png";
-import user from "../../../src/Images/Flags/user.png";
 import useAuth from "./../../hooks/useAuth";
 
 const MiniBar = () => {
