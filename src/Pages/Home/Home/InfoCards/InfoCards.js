@@ -18,7 +18,7 @@ const InfoCards = () => {
       container
       spacing={{ xs: 2, md: 3 }}
       columns={{ xs: 4, sm: 8, md: 12 }}
-      sx={{ paddingTop: "16px" }}
+      sx={{ padding: "16px 0" }}
     >
       {webInfos.map((webInfo) => (
         <InfoCard webInfo={webInfo} key={webInfo.id} />

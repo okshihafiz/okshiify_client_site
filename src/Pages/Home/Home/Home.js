@@ -11,6 +11,7 @@ import DemoCard from "../DemoCard/DemoCard";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import Products from "../../Products/Products";
 import InfoCards from "./InfoCards/InfoCards";
+import DealProduct from "../DealProduct/DealProduct";
 const Home = () => {
   return (
     <>
@@ -21,6 +22,7 @@ const Home = () => {
         <TopSlider />
         <DemoCard />
         <InfoCards />
+        <DealProduct />
         <PopUp />
       </Container>
 
