@@ -3,7 +3,7 @@
       "id": "01",
       "title": "Smart Phone",
       "title2": "12 Products",
-      "img": "https://i.ibb.co/KXDGrdv/1.png"
+      "img": "https://i.ibb.co/x7HKwvR/1-removebg-preview.png"
     },
     {
       "id": "02",
@@ -21,31 +21,55 @@
       "id": "04",
       "title": "Headphone",
       "title2": "40 Products",
-      "img": "https://i.ibb.co/LQzdBZf/4.png"
+      "img": "https://i.ibb.co/wKtJnY4/4-removebg-preview.png"
     },
     {
       "id": "05",
-      "title": "Sony Tv",
-      "title2": "10 Products",
-      "img": "https://i.ibb.co/ZXn3FWD/5.png"
+      "title": "Headphone Top",
+      "title2": "15 Products",
+      "img": "https://i.ibb.co/724zrSK/8-removebg-preview.png"
     },
     {
       "id": "06",
+      "title": "Sony Tv",
+      "title2": "10 Products",
+      "img": "https://i.ibb.co/pd1VdWf/5-removebg-preview.png"
+    },
+    {
+      "id": "07",
       "title": "Cemara",
       "title2": "14 Products",
       "img": "https://i.ibb.co/mhXT66B/6.png"
     },
     {
-      "id": "07",
+      "id": "08",
       "title": "Web Cam",
       "title2": "14 Products",
-      "img": "https://i.ibb.co/yXZnLGZ/7.png"
+      "img": "https://i.ibb.co/drqbyyV/7-removebg-preview.png"
     },
     {
-      "id": "08",
+      "id": "09",
+      "title": "Security Camera",
+      "title2": "8 Products",
+      "img": "https://i.ibb.co/6BVFfQR/2.png"
+    },
+    {
+      "id": "10",
       "title": "Headphone Top",
       "title2": "15 Products",
-      "img": "https://i.ibb.co/sCxMwqh/8.png"
+      "img": "https://i.ibb.co/724zrSK/8-removebg-preview.png"
+    },
+    {
+      "id": "11",
+      "title": "Smart Watch",
+      "title2": "5 Products",
+      "img": "https://i.ibb.co/Rcz9gr4/3.png"
+    },
+    {
+      "id": "12",
+      "title": "Cemara",
+      "title2": "14 Products",
+      "img": "https://i.ibb.co/mhXT66B/6.png"
     }
   ]
   
