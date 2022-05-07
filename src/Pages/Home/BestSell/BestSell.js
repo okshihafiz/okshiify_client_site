@@ -3,8 +3,6 @@ import { makeStyles } from "@mui/styles";
 import Card from "@mui/material/Card";
 import React from "react";
 import Rating from "react-rating";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import Rating from "react-rating";
 
 const BestSell = ({ bestData }) => {
   // Write style component here
