@@ -8,6 +8,7 @@ import dashboard from "../../../src/Images/Flags/dashboard.png";
 import CustomSearch from "../SearchBar/CustomSearch";
 import { Box } from "@mui/system";
 import "../../index.css";
+import { NavLink } from "react-router-dom";
 const MidBar = () => {
   const theme = useTheme();
 
@@ -97,16 +98,21 @@ const MidBar = () => {
           xs={6}
           md={2}
         >
-          <Typography
-            style={{ fontSize: "15px", cursor: "pointer" }}
-            className={classes.typography}
-            variant="body2"
-            gutterBottom
+          <NavLink
+            style={{ textDecoration: "none", color: "#000" }}
+            to="/dashboard"
           >
-            <img className={classes.topImg} src={dashboard} alt="" /> Dash Board{" "}
-            <br />
-            Update here
-          </Typography>
+            <Typography
+              style={{ fontSize: "15px", cursor: "pointer" }}
+              className={classes.typography}
+              variant="body2"
+              gutterBottom
+            >
+              <img className={classes.topImg} src={dashboard} alt="" /> Dash
+              Board <br />
+              Update here
+            </Typography>
+          </NavLink>
         </Grid>
       </Grid>
     </Box>
