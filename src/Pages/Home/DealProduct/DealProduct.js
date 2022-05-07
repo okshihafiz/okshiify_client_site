@@ -3,6 +3,7 @@ import { Box, Grid, Typography, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React, { useEffect, useRef, useState } from "react";
 import headphone1 from "../../../Images/headerphone1.png";
+import BestSelles from "../BestSelles/BestSelles";
 
 const DealProduct = () => {
   // Count Down state
@@ -201,6 +202,9 @@ const DealProduct = () => {
             Best Selling
           </Typography>
           <hr style={{ borderTop: "1px solid #e1e1e1" }} />
+          <Box>
+            <BestSelles />
+          </Box>
         </Box>
       </Grid>
     </Grid>
