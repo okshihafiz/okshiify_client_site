@@ -22,7 +22,7 @@ const MiniBar = () => {
 
   const useStyles = makeStyles({
     root: {
-      background: " #fff",
+      background: "#E6BE5C",
       color: " #000",
       padding: "0",
       display: "flex",

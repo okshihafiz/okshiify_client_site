@@ -23,7 +23,7 @@ const BestSell = ({ bestData }) => {
     <Grid item xs={12} md={12} sm={12}>
       <Card className={classes.CardBox}>
         <CardMedia
-          style={{ width: "22%", height: "18%" }}
+          style={{ width: "24%", height: "18%" }}
           component="img"
           image={img}
           alt="service talk"
