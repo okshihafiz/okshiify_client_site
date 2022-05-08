@@ -10,7 +10,7 @@ const DashboardTopBar = () => {
 
   const useStyles = makeStyles({
     root: {
-      background: "#e1e1e1",
+      background: "#F8F9FA",
       color: " #171717",
       padding: "10px",
     },

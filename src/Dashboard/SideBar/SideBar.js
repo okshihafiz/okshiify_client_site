@@ -24,6 +24,7 @@ const SideBar = () => {
       background: " #f8f9fa",
       position: "sticky",
       top: "50px",
+      marginTop: "4px",
     },
 
     sidebarWrapper: {

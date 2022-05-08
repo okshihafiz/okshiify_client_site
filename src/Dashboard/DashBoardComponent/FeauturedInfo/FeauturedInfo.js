@@ -13,9 +13,9 @@ const FeauturedInfo = () => {
 
     futuredInfoItem: {
       flex: "1",
-      padding: "50px",
+      padding: "40px",
       margin: "0 14px",
-      borderRadius: "6px",
+      borderRadius: "8px",
       boxShadow: "12px 12px 46px -16px rgba(0, 0, 0, 0.2)",
       webkitBoxShadow: "12px 12px 46px -16px rgba(0, 0, 0, 0.2)",
       mozBoxShadow: "12px 12px 46px -16px rgba(0, 0, 0, 0.2)",
