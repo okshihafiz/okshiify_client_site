@@ -17,7 +17,10 @@ const DashboardTopBar = () => {
 
     logoRespnsive: {
       [theme.breakpoints.down("sm")]: {
-        textAlign: "center",
+        display: "blok",
+        width: "50%",
+        marginRight: "auto",
+        marginLeft: "auto",
       },
     },
 
@@ -72,6 +75,7 @@ const DashboardTopBar = () => {
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <CardMedia
+              className={classes.logoRespnsive}
               component="img"
               style={{ width: "auto", height: "45px" }}
               image={BusinessLogo}

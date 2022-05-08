@@ -69,7 +69,7 @@ const SideBar = () => {
 
     linkIcon: {
       marginRight: "10px",
-      fontSize: "20px !important",
+      fontSize: "22px",
     },
   });
   const classes = useStyles();
