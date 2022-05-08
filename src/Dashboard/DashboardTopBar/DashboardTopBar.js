@@ -1,16 +1,17 @@
 import { Language, Notifications, Settings } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/styles";
-import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
+import { Box, Grid, useTheme, CardMedia } from "@mui/material";
 import React from "react";
 import clsx from "clsx";
+import BusinessLogo from "../../../src/Images/logo/businessLogo.png";
 
 const DashboardTopBar = () => {
   const theme = useTheme();
 
   const useStyles = makeStyles({
     root: {
-      background: "#131921",
-      color: " #FFD700",
+      background: "#e1e1e1",
+      color: " #171717",
       padding: "10px",
     },
 
@@ -67,16 +68,15 @@ const DashboardTopBar = () => {
 
   return (
     <Box className={classes.root}>
-      <Container>
+      <Box>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
-            <Typography
-              className={classes.logoRespnsive}
-              variant="h5"
-              gutterBottom
-            >
-              Okshiify Admin Pannel
-            </Typography>
+            <CardMedia
+              component="img"
+              style={{ width: "auto", height: "45px" }}
+              image={BusinessLogo}
+              alt="green iguana"
+            />
           </Grid>
 
           <Grid item xs={12} md={6}>
@@ -102,7 +102,7 @@ const DashboardTopBar = () => {
             </Box>
           </Grid>
         </Grid>
-      </Container>
+      </Box>
     </Box>
   );
 };
