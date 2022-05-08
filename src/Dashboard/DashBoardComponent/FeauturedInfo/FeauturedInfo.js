@@ -3,6 +3,7 @@ import React from "react";
 import { Box } from "@mui/system";
 import { makeStyles } from "@mui/styles";
 import clsx from "clsx";
+import { Grid } from "@mui/material";
 
 const FeauturedInfo = () => {
   const useStyles = makeStyles({
@@ -58,57 +59,65 @@ const FeauturedInfo = () => {
 
   return (
     <Box className={classes.futuredInfo}>
-      <Box className={classes.futuredInfoItem}>
-        <span className={classes.futuredInfoTitle}>Revanue</span>
-        <Box className={classes.futureInfoMoneyConyainer}>
-          <span className={classes.headMoney}>$ 2,450</span>
-          <span className={classes.lessMoney}>
-            {" "}
-            -11.14{" "}
-            <ArrowDownwardRounded
-              className={clsx(classes.infoArrow, classes.negative)}
-            />{" "}
-          </span>
-        </Box>
-        <span className={classes.futureMonthTitle}>
-          {" "}
-          Compared to last month
-        </span>
-      </Box>
-      <Box className={classes.futuredInfoItem}>
-        <span className={classes.futuredInfoTitle}>Sales</span>
-        <Box className={classes.futureInfoMoneyConyainer}>
-          <span className={classes.headMoney}>$ 3,550</span>
-          <span className={classes.lessMoney}>
-            {" "}
-            10.20{" "}
-            <ArrowUpward
-              className={clsx(classes.infoArrow, classes.positive)}
-            />{" "}
-          </span>
-        </Box>
-        <span className={classes.futureMonthTitle}>
-          {" "}
-          Compared to last month
-        </span>
-      </Box>
-      <Box className={classes.futuredInfoItem}>
-        <span className={classes.futuredInfoTitle}>Cost</span>
-        <Box className={classes.futureInfoMoneyConyainer}>
-          <span className={classes.headMoney}>$ 1,250</span>
-          <span className={classes.lessMoney}>
-            {" "}
-            -06.13{" "}
-            <ArrowDownwardRounded
-              className={clsx(classes.infoArrow, classes.negative)}
-            />{" "}
-          </span>
-        </Box>
-        <span className={classes.futureMonthTitle}>
-          {" "}
-          Compared to last month
-        </span>
-      </Box>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={4}>
+          <Box className={classes.futuredInfoItem}>
+            <span className={classes.futuredInfoTitle}>Revanue</span>
+            <Box className={classes.futureInfoMoneyConyainer}>
+              <span className={classes.headMoney}>$ 2,450</span>
+              <span className={classes.lessMoney}>
+                {" "}
+                -11.14{" "}
+                <ArrowDownwardRounded
+                  className={clsx(classes.infoArrow, classes.negative)}
+                />{" "}
+              </span>
+            </Box>
+            <span className={classes.futureMonthTitle}>
+              {" "}
+              Compared to last month
+            </span>
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Box className={classes.futuredInfoItem}>
+            <span className={classes.futuredInfoTitle}>Sales</span>
+            <Box className={classes.futureInfoMoneyConyainer}>
+              <span className={classes.headMoney}>$ 3,550</span>
+              <span className={classes.lessMoney}>
+                {" "}
+                10.20{" "}
+                <ArrowUpward
+                  className={clsx(classes.infoArrow, classes.positive)}
+                />{" "}
+              </span>
+            </Box>
+            <span className={classes.futureMonthTitle}>
+              {" "}
+              Compared to last month
+            </span>
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Box className={classes.futuredInfoItem}>
+            <span className={classes.futuredInfoTitle}>Cost</span>
+            <Box className={classes.futureInfoMoneyConyainer}>
+              <span className={classes.headMoney}>$ 1,250</span>
+              <span className={classes.lessMoney}>
+                {" "}
+                -06.13{" "}
+                <ArrowDownwardRounded
+                  className={clsx(classes.infoArrow, classes.negative)}
+                />{" "}
+              </span>
+            </Box>
+            <span className={classes.futureMonthTitle}>
+              {" "}
+              Compared to last month
+            </span>
+          </Box>
+        </Grid>
+      </Grid>
     </Box>
   );
 };

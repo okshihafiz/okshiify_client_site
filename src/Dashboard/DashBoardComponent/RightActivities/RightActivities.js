@@ -47,6 +47,9 @@ const RightActivities = () => {
       padding: "5px 7px",
       border: "none",
       borderRadius: "10px",
+      background: "#FFEFF2",
+      color: "#E13E31",
+      fontWeight: "bold",
     },
 
     Pending: {
