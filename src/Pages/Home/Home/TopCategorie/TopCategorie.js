@@ -12,7 +12,6 @@ const TopCategorie = ({ topCategories }) => {
   //Write here style Component
   const useStyles = makeStyles({
     CardBox: {
-      background: "#EEEEEE",
       boxShadow: "none",
       display: "flex",
       alignItems: "center",

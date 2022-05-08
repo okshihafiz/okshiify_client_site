@@ -1,6 +1,9 @@
+import { Box, Grid } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AuthProvider from "./Contexts/AuthProvider/AuthProvider";
 import Dashboard from "./Dashboard/Dashboard";
+import UserList from "./Dashboard/DashBoardComponent/UserList/UserList";
+import DashboardHome from "./Dashboard/DashboardHome/DashboardHome";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import Home from "./Pages/Home/Home/Home";
@@ -20,8 +23,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/shop" element={<Shop />} />
-
-          <Route path="dashboard" element={<Dashboard />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
