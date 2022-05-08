@@ -1,6 +1,7 @@
 import React from "react";
 import { Visibility } from "@material-ui/icons";
-import { Box, makeStyles } from "@mui/material";
+import { Box } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
 const LeftActivities = () => {
   const useStyles = makeStyles({
