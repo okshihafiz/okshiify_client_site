@@ -23,6 +23,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
